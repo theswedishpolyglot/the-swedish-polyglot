@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+/* === GENERAL === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    flex: 1; /* Allow body to grow to fill space */
+}
+
+/* === HEADER === */
+
+header {
+    padding: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+/* Navbar */
+nav {
+    padding: 5px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+    color: #FFCD00;
+}
+
+/* === MAIN === */
+
+main {
+    flex: 1; /* Allow main content to grow and push the footer down */
+    width: 100%;
+}
+
+section {
+    max-width: 1200px;
+}
+
+.content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section p {
+    margin: 20px 0;
+}
+
+section li {
+    list-style-type: "* ";
+    margin: 15px;
+}
+
+#contact {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.bold-italic-text {
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* === FOOTER === */
+footer {
+    text-align: center;
+    font-size: 0.7rem;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    position: sticky;
+    bottom: 0;
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+footer p a {
+    color: #FFCD00;
+}
+
+footer p a:hover {
+    color: #ddd;
+}
+
+/* === IMAGES === */
+.full-width-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* === RESPONSIVITY === */
+@media screen and (max-width: 768px) {
+
+    body {
+        font-size: 0.6rem;
+    }
+
+    footer {
+        font-size: 0.5rem;
+    }
+
+    nav ul li {
+        margin-left: 15px;
+    }
+
+}
