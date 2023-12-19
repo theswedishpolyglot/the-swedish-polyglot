@@ -130,7 +130,7 @@ footer p a {
 }
 
 footer p a:hover {
-    color: #ddd;
+    color: #ffe372;
 }
 
 /* === IMAGES === */
@@ -161,14 +161,4 @@ figcaption {
     .content {
         width: 95%;
     }
-
-    nav#main-navbar {
-        font-size: 0.7rem;
-    }
-    
-    nav#sub-navbar {
-        font-size: 0.5rem;
-    }
-    
-
 }
