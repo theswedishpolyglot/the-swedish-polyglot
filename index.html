@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <!-- DONE: Implement a booking system. -->
 <!-- DONE: Implement a simple shop system. -->
-<!-- Implement a custom domain i.e. "theswedishpolyglot.com"-->
+<!-- DONE: Implement a custom domain i.e. "theswedishpolyglot.com"-->
+ <!--    
+    Switch domain registrar from SquareSpace to Domain.com.
+    Cancel all SquareSpace services.
+    Make sure DNS settings are working properly.
+ -->
 <!-- Improve on booking system settings? -->
 <!-- Post 10 products on Gumroad. -->
+<!-- Add a logo. -->
+<!-- Make header and footer show up dynamically. -->
+<!-- Render .md files (e.g. guides) using Python (preprocessing only) -->
+<!-- Set up auto-generation of flashcard Instagram images from a database. E.g. 10 cards per post per day -->
+<!-- Create reusable HTML files for header, banner etc. and serve dynamically with js. -->
+
 <html lang="en">
 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>The Swedish Polyglot</title>
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/script.js" defer></script>
+        <script src="/js/script.js" defer></script>
+        <script type="text/javascript" src="/js/components.js" defer></script>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+        <link rel="icon" href="/favicon.png" type="image/x-icon">
     </head>
 
     <body>
         <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Start</a></li>
-                    <li><a href="#shop">Shop</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <div id="navbar"></div>
+            <div id="sub-navbar"></div>
         </header>
-
-        <picture>
-            <img src="./img/the-swedish-polyglot-banner.png" alt="The Swedish Polyglot Banner" class="full-width-image">
-        </picture>
-
+        <div id="banner"></div>
         <main>
             <section class="content" id="about">
                 <h1>About</h1>
@@ -62,6 +65,12 @@
         <main>
             <section class="content" id="services">
                 <h1>Services</h1>
+                <figure>
+                    <picture>
+                        <img src="/img/italki-profile.jpg" alt="italki profile" class="italki-profile">
+                    </picture>
+                    <figcaption>(Screenshot of <a href="https://www.italki.com/TheSwedishPolyglot">italki teacher profile</a> as of december 2023.)</figcaption>
+                </figure>
                 <p>William is currently offering his language services over on his <a href="https://www.italki.com/TheSwedishPolyglot">teacher profile</a>. These services include:</p>
                 <ul>
                     <li><span class="bold-italic-text">Language Lessons:</span> 
@@ -107,7 +116,12 @@
                 </ul>
                 
             </section>
-    
+
+            <section class="content" id="guides">
+                <h1>Guides</h1>
+                <p>William has written several guides for his students and fellow language learners. They can be found <a href="pages/guides.html">here</a>.</p>
+            </section>
+
             <section class="content" id="contact">
                 <h1>Contact</h1>
                 <p>Email @ <a href="mailto:theswedishpolyglot@gmail.com">theswedishpolyglot@gmail.com</a></p>
@@ -120,8 +134,8 @@
             </section>
         </main>
 
-        <script type="text/javascript" src="./js/language-table.js"></script>
-        <script type="text/javascript" src="./js/simply-book.js"></script>
+        <script type="text/javascript" src="/js/language-table.js"></script>
+        <script type="text/javascript" src="/js/simply-book.js"></script>
         
         <script src="https://gumroad.com/js/gumroad-embed.js"></script> <!-- Product Embedding for Swedish 2k -->
         <!-- <div class="gumroad-product-embed"><a href="https://theswedishpolyglot.gumroad.com/l/swedish2k">Loading...</a></div> -->
@@ -131,10 +145,6 @@
 
         <br/>
 
-        <footer>
-            <p>Book a lesson <a href="https://www.italki.com/TheSwedishPolyglot">here</a>.</p>
-            <p>See library of products <a href="https://theswedishpolyglot.gumroad.com/">here</a>.</p>
-            <p>&copy; 2023 The Swedish Polyglot. All rights reserved.</p>
-        </footer>
+        <footer id="footer"></footer>
     </body>
 </html>

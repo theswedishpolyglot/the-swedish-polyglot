@@ -82,3 +82,13 @@ th {
         padding: 0.05rem;
     }
 }
+
+@media screen and (max-width: 485px) {
+    table {
+        font-size: 0.265rem;
+    }
+
+    th, td {
+        padding: 0.05rem;
+    }
+}
