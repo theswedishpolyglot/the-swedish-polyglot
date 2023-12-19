@@ -142,12 +142,8 @@ footer p a:hover {
         width: 95%;
     }
 
-    footer {
-        font-size: 1rem;
-    }
-
     nav ul li {
-        margin-left: 1px;
+        margin-left: 0;
         font-size: 0.7rem;
     }
 
