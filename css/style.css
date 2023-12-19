@@ -135,15 +135,20 @@ footer p a:hover {
 @media screen and (max-width: 768px) {
 
     body {
-        font-size: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .content {
+        width: 95%;
     }
 
     footer {
-        font-size: 0.5rem;
+        font-size: 1rem;
     }
 
     nav ul li {
-        margin-left: 15px;
+        margin-left: 1px;
+        font-size: 0.7rem;
     }
 
 }
