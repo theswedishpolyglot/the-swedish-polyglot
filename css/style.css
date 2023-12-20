@@ -40,12 +40,12 @@ header {
 }
 
 /* Navbar */
-nav#main-navbar {
+nav#primary-navbar {
     padding: 5px;
     background-color: #333;
 }
 
-nav#sub-navbar {
+nav#secondary-navbar {
     padding: 5px;
     background-color: #797979;
     font-size: 0.7rem;
@@ -151,6 +151,13 @@ figcaption {
     font-size: 0.9rem;
 }
 
+.logo {
+    width: 45px;
+    max-height: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
 /* === RESPONSIVITY === */
 @media screen and (max-width: 768px) {
 
@@ -160,5 +167,38 @@ figcaption {
 
     .content {
         width: 95%;
+    }
+}
+
+@media screen and (max-width: 626px) {
+    .logo {
+        position: absolute;
+        left: 0;
+        width: 38px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .logo {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        width: 38px;
+    }
+}
+
+@media screen and (max-width: 518px) {
+    .logo {
+        position: static;
+        transform: translateY(15px);
+        width: 38px;
+    }
+}
+
+@media screen and (max-width: 402px) {
+    .logo {
+        position: static;
+        transform: translateY(0px);
+        width: 38px;
     }
 }

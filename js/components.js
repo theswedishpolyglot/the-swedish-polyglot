@@ -43,7 +43,7 @@ function loadNavbar() {
             return response.text();
         })
         .then(html => {
-            document.getElementById('navbar').innerHTML = html;
+            document.getElementById('primary-navbar').innerHTML = html;
             setupSubNavbarEventListeners();
         })
         .catch(error => {
@@ -60,9 +60,9 @@ function setupSubNavbarEventListeners() {
         'contact': 'contact-navbar.html'
     };
 
-    document.querySelectorAll('#navbar ul li a').forEach(item => {
+    document.querySelectorAll('#primary-navbar ul li a').forEach(item => {
         item.addEventListener('mouseover', (event) => {
-            document.querySelectorAll('#navbar ul li a').forEach(navItem => {
+            document.querySelectorAll('#primary-navbar ul li a').forEach(navItem => {
                 navItem.classList.remove('active-navbar');
             });
             event.target.classList.add('active-navbar');
@@ -71,7 +71,7 @@ function setupSubNavbarEventListeners() {
             const isStartButton = href === '/index.html';
 
             if (isStartButton) {
-                document.getElementById('sub-navbar').innerHTML = '';
+                document.getElementById('secondary-navbar').innerHTML = '';
             } else {
                 const navItemId = href.split('#').pop();
                 const subNavbarFile = subNavbarMapping[navItemId];
@@ -84,7 +84,7 @@ function setupSubNavbarEventListeners() {
 }
 
 function loadSubNavbar(subNavbarFile) {
-    fetch(`/components/sub-navbar/${subNavbarFile}`)
+    fetch(`/components/secondary-navbar/${subNavbarFile}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -92,10 +92,10 @@ function loadSubNavbar(subNavbarFile) {
             return response.text();
         })
         .then(html => {
-            document.getElementById('sub-navbar').innerHTML = html;
+            document.getElementById('secondary-navbar').innerHTML = html;
         })
         .catch(error => {
-            console.error(`Failed to load sub-navbar:`, error);
+            console.error(`Failed to load secondary-navbar:`, error);
         });
 }
 
