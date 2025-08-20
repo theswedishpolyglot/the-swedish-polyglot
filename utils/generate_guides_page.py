@@ -65,9 +65,9 @@ class GenerateGuidesPage:
         return links_html
 
 if __name__ == "__main__":
-    head_html_path = r'C:\Users\willi\Desktop\projects\the-swedish-polyglot\components\head.html'
-    guides_folder = r'C:\Users\willi\Desktop\projects\the-swedish-polyglot\pages\guides'
-    output_file = r'C:\Users\willi\Desktop\projects\the-swedish-polyglot\pages\guides.html'
+    head_html_path = r''
+    guides_folder = r''
+    output_file = r''
     
     generator = GenerateGuidesPage(guides_folder, head_html_path, output_file)
     generator.generate_page()

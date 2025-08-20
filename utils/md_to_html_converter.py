@@ -68,8 +68,8 @@ class MarkdownToHTMLConverter:
             file.write(full_html)
 
 if __name__ == "__main__":
-    head_html_path = r'C:\Users\willi\Desktop\projects\the-swedish-polyglot\components\head.html'
-    converter = MarkdownToHTMLConverter(r'C:\Users\willi\Desktop\projects\the-swedish-polyglot\md', 
-                                        r'C:\Users\willi\Desktop\projects\the-swedish-polyglot\pages\guides',
+    head_html_path = r''
+    converter = MarkdownToHTMLConverter(r'', 
+                                        r'',
                                         head_html_path)
     converter.convert_all()
