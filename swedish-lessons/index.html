@@ -32,18 +32,7 @@
         <br>
         <p style="text-align:center; margin-top:1rem;">
 
-        <!--
-        <script src="//widget.simplybook.it/v2/widget/widget.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            var widget = new SimplybookWidget({"widget_type":"button","url":"https:\/\/williammatkaselka.simplybook.it","theme":"default","theme_settings":{"timeline_hide_unavailable":"1","hide_past_days":"0","timeline_show_end_time":"0","timeline_modern_display":"as_slots","sb_base_color":"#006aa7","display_item_mode":"block","booking_nav_bg_color":"#006aa7","body_bg_color":"#f2f2f2","sb_review_image":"","dark_font_color":"#474747","light_font_color":"#f5fcff","btn_color_1":"#006aa7","sb_company_label_color":"#ffffff","hide_img_mode":"0","show_sidebar":"1","sb_busy":"#c7b3b3","sb_available":"#d6ebff"},"timeline":"modern","datepicker":"top_calendar","is_rtl":false,"app_config":{"clear_session":0,"allow_switch_to_ada":0,"predefined":{"provider":"2","service":"4"}},"button_title":"Book a free 15-min consultation","button_background_color":"#006aa7","button_text_color":"#ffffff","button_position":"right","button_position_offset":"55%"});
-        </script>
-        -->
-
-        <a href="https://williammatkaselka.simplybook.it/v2/#book"
-          target="_blank" rel="noopener noreferrer"
-          style="text-decoration:none; background:#006aa7; color:#fff; padding:10px 16px; border-radius:4px; display:inline-block;">
-          Book a free 15-min consultation (or your first lesson)
-        </a>
+          <div id="book-consultation-btn" style="text-align:center;"></div>
 
         </p>
       </section>
@@ -61,11 +50,7 @@
 
         <br>
         <p style="text-align:center; margin-top:1rem;">
-          <a href="https://williammatkaselka.simplybook.it/v2/#packages"
-            target="_blank" rel="noopener noreferrer"
-            style="text-decoration:none; background:#006aa7; color:#fff; padding:10px 16px; border-radius:4px; display:inline-block;">
-            Book a 10-lesson package (10 % discount) with a premium flashcard deck included
-          </a>
+          <div id="ten-lesson-package-btn" style="text-align:center;"></div>
         </p>
       </section>
 
@@ -95,11 +80,14 @@
       <!-- PACKAGES / PRICING -->
       <section class="content" id="packages" style="text-align:center;">
         <h1>Packages</h1>
-        <p><strong>Single Lesson (45 min):</strong> 750 SEK</p>
-        <p><strong>5-Lesson Package (45 min):</strong> 3 375 SEK (5 % discount)</p>
-        <p><strong>10-Lesson Package (45 min):</strong> 6 750 SEK (10 % discount + a premium flashcard deck)</p>
-        <p>Each lesson includes post-lesson materials (digital flashcards and audio files).<br>
-        The 10-lesson package includes access to additional premium learning materials for self-study between lessons.</p>
+        <p><strong>Single Lesson (30, 45 or 60 min):</strong> 600 / 750 / 900 SEK</p>
+        <p><strong>5-Lesson Package (30, 45 or 60 min):</strong> 10 % discount</p>
+        <p><strong>10-Lesson Package (30, 45 or 60 min):</strong> 10 % discount + 1x premium flashcard deck</p>
+        <p><strong>15-Lesson Package (30, 45 or 60 min):</strong> 10 % discount + 2x premium flashcard decks</p>
+        <p><strong>20-Lesson Package (30, 45 or 60 min):</strong> 10 % discount + 3x premium flashcard decks</p>
+
+        <p>Each lesson includes post-lesson materials based on the lesson notes (digital flashcards and audio files).<br>
+        The 10, 15 and 20-lesson packages includes access to additional premium learning materials for self-study between lessons.</p>
 
         <br><p style="text-align:center; margin-top:1rem;">
           <a href="https://williammatkaselka.simplybook.it/v2/#packages"
@@ -132,5 +120,13 @@
     </main>
 
     <footer id="footer"></footer>
+
+    <script type="module">
+      import { createSimplyBookButton, createSimplyBookPackageButton } from "/js/buttons/simplybook-button.js";
+
+      createSimplyBookButton("book-consultation-btn", "Book a free 15-min consultation (or your first lesson)");
+      createSimplyBookPackageButton("ten-lesson-package-btn", "Book a 10-lesson package (10 % discount) with a premium flashcard deck included");
+    </script>
+
   </body>
 </html>
