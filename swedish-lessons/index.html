@@ -81,13 +81,27 @@
       <section class="content" id="packages" style="text-align:center;">
         <h1>Packages</h1>
         <p><strong>Single Lesson (30, 45 or 60 min):</strong> 600 / 750 / 900 SEK</p>
-        <p><strong>5-Lesson Package (30, 45 or 60 min):</strong> 10 % discount</p>
-        <p><strong>10-Lesson Package (30, 45 or 60 min):</strong> 10 % discount + 1x premium flashcard deck</p>
-        <p><strong>15-Lesson Package (30, 45 or 60 min):</strong> 10 % discount + 2x premium flashcard decks</p>
-        <p><strong>20-Lesson Package (30, 45 or 60 min):</strong> 10 % discount + 3x premium flashcard decks</p>
+        <p><strong>5-Lesson Package (30, 45 or 60 min):</strong> 10 % discount <br>Go from beginner (A1) to pre-intermediate level (A2). <br>Expect to add up to 500 words to your existing vocabulary.</p>
+        <p><strong>10-Lesson Package (30, 45 or 60 min):</strong> 10 % discount + 1x premium flashcard deck <br>Go from beginner (A1) to lower intermediate (B1) level with one package. <br>Expect to learn 2 000 to 3 000 words.</p>
+        <p><strong>15-Lesson Package (30, 45 or 60 min):</strong> 10 % discount + 2x premium flashcard decks <br>Go from beginner (A1) to mid-intermediate (B1/B2) level with one package. <br>Expect to learn 3 000 to 5 000 words.</p>
+        <p><strong>20-Lesson Package (30, 45 or 60 min):</strong> 10 % discount + 3x premium flashcard decks <br>Go from beginner (A1) to upper intermediate (B2) level with one package. <br>Expect to learn 5 000 to 10 000 words.</p>
+        <p><strong>30-Lesson Package (30, 45 or 60 min):</strong> 10 % discount + All (6x) premium flashcard decks + a custom premium flashcard deck upon completion of the package (~ 10 000 phrases and sentences). <br>Go from beginner (A1) to advanced (C1) level with one package. <br>Expect to learn 10 000 to 15 000 words.</p>
 
         <p>Each lesson includes post-lesson materials based on the lesson notes (digital flashcards and audio files).<br>
         The 10, 15 and 20-lesson packages includes access to additional premium learning materials for self-study between lessons.</p>
+        <p>There are currently six premium flashcard decks available: for vocabulary (beginner/intermediate), sentence study (intermediate/advanced), verbs, nouns, pronunciation and multi-word phrases.</p>
+
+        <section class="content" id="packages">
+          <h1>Packages</h1>
+          <div class="packages-table"></div>
+        </section>
+
+        <script type="module">
+          import { createPackagesTable } from "/js/packages-table.js";
+          document.addEventListener("DOMContentLoaded", () => {
+            createPackagesTable(".packages-table");
+          });
+        </script>
 
         <br><p style="text-align:center; margin-top:1rem;">
           <a href="https://williammatkaselka.simplybook.it/v2/#packages"
